@@ -10,8 +10,14 @@ const install = (Vue) => {
   });
 }
 
-export default {
+const plugins = {
   version: '0.0.1',
-  install,
-  Test
+  install
 }
+
+const API = {
+  ...plugins,
+  ...components
+}
+
+module.exports.default = module.exports = API
