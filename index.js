@@ -12,5 +12,6 @@ const install = (Vue) => {
 
 export default {
   version: '0.0.1',
-  install
+  install,
+  Test
 }
