@@ -1,7 +1,11 @@
 import Test from './src/components/test'
+import DataGrid from './src/components/data-grid'
+import DataGridItem from './src/components/data-grid-item'
 
 const components = {
-  Test
+  Test,
+  DataGrid,
+  DataGridItem
 }
 
 const install = (Vue) => {
