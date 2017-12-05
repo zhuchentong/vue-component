@@ -4,7 +4,7 @@
       <label class="data-grid-item__label" :style="labelStyle">
         {{label}}
       </label>
-      <div class="data-grid-item__separate"></div>
+      <div class="data-grid-item__separate" :style="separateStyle"></div>
       <div class="data-grid-item__content col-span" :style="contentStyle">
         <slot></slot>
       </div>
@@ -49,10 +49,16 @@ export default {
           "-ms-flex-preferred-size": spanValue,
           "flex-basis": spanValue,
           "max-width": spanValue,
-          "min-width": spanValue
+          "min-width": spanValue,
+          "border-right": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`,
+          "border-bottom": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`
+          
         };
       } else {
-        return {};
+        return {
+          "border-right": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`,
+          "border-bottom": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`
+        }
       }
     },
     /**
@@ -69,6 +75,11 @@ export default {
     contentStyle() {
       return {
         textAlign: this.itemContentAlign
+      };
+    },
+    separateStyle(){
+      return {
+        "background": this.grid.borderColor
       };
     },
     itemLabelAlign() {
@@ -95,8 +106,6 @@ export default {
 .data-grid-item {
   display: table-cell;
   padding: 0;
-  border-right: solid 1px black;
-  border-bottom: solid 1px black;
 }
 
 .data-grid-item-container {
@@ -107,12 +116,11 @@ export default {
   }
   align-items: center;
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 
 .data-grid-item__separate {
   width: 1px;
   height: 100%;
-  background: black;
 }
 </style>

@@ -1,15 +1,65 @@
 
-.grid-content[data-v-0cab4101] {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .grid-content {
   border-top: solid 1px black;
   border-left: solid 1px black;
-}
-
+} */
 
 .data-grid-item[data-v-7943fb98] {
   display: table-cell;
   padding: 0;
-  border-right: solid 1px black;
-  border-bottom: solid 1px black;
 }
 .data-grid-item-container[data-v-7943fb98] {
   align-items: center;
@@ -24,5 +74,4 @@
 .data-grid-item__separate[data-v-7943fb98] {
   width: 1px;
   height: 100%;
-  background: black;
 }
