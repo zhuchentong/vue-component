@@ -38,7 +38,7 @@
     "url-loader": "^0.5.7",
     "vue": "^2.4.4",
     "vue-loader": "^10.3.0",
-    "vue-style-loader": "^2.0.0",
+    "vue-server-renderer": "^2.5.9",
     "vue-template-compiler": "^2.1.10",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.5",

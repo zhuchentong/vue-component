@@ -1,9 +1,9 @@
 <template>
   <div class="data-grid">
-    <el-row type="flex" align="left" class="data-grid-title">
+    <!-- <div type="flex" align="left" class="data-grid-title">
       <span class="iconfont" :class="[iconClass]"></span>
       <span>{{label}}</span>
-    </el-row>
+    </div> -->
     <div class="grid-content row">
       <slot></slot>
     </div>
@@ -36,7 +36,7 @@
   }
 
 </script>
-<style lang="less" scoped>
+<style lang="css" scoped>
   .grid-content {
     border-top: solid 1px black;
     border-left: solid 1px black;
