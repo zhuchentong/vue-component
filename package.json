@@ -4,8 +4,8 @@
   "description": "前端vue组件库",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8081 --config build/webpack.dev.config.js",
-    "build": "webpack --config build/webpack.dist.config.js"
+    "build": "webpack --config build/webpack.dist.config.js",
+    "dev": "webpack-dev-server --content-base examples/ --open --inline --hot --compress --history-api-fallback --port 8081 --config build/webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
@@ -43,5 +43,10 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^3.0.0"
+  },
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "html-loader": "^0.5.1",
+    "vue-router": "^3.0.1"
   }
 }

@@ -8,7 +8,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
-
 module.exports = {
   // 加载器
   module: {
@@ -19,17 +18,17 @@ module.exports = {
         options: {
           extractCSS: true,
           loaders: {
-            css: ExtractTextPlugin.extract({
+            css: process.env.NODE_ENV === 'production' ? ExtractTextPlugin.extract({
               use: 'css-loader',
               fallback: 'vue-style-loader'
-            }),
-            less: ExtractTextPlugin.extract({
+            }) : "vue-style-loader!css-loader",
+            less:  process.env.NODE_ENV === 'production' ? ExtractTextPlugin.extract({
               use: [
                 'css-loader',
                 'less-loader'
               ],
               fallback: 'vue-style-loader'
-            }),
+            }): "vue-style-loader!css-loader!less-loader",
           },
           postLoaders: {
             html: 'babel-loader'

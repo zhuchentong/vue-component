@@ -14,7 +14,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 module.exports = merge(webpackBaseConfig, {
   // 入口
   entry: {
-    main: './index.js',
+    main: './examples/index',
     vendors: ['vue', 'vue-router']
   },
   // 输出
@@ -31,11 +31,11 @@ module.exports = merge(webpackBaseConfig, {
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendors', filename: 'vendor.bundle.js' }),
-    // new HtmlWebpackPlugin({
-    //   inject: true,
-    //   filename: path.join(__dirname, '../examples/dist/index.html'),
-    //   template: path.join(__dirname, '../examples/index.html')
-    // }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      filename: path.join(__dirname, '../examples/dist/index.html'),
+      template: path.join(__dirname, '../examples/index.html')
+    }),
     new FriendlyErrorsPlugin()
   ]
 });
