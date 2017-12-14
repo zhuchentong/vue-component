@@ -1,9 +1,11 @@
 import DataGrid from './src/components/data-grid'
 import DataGridItem from './src/components/data-grid-item'
+import Flex from './src/components/flex'
 
 const components = {
   DataGrid,
-  DataGridItem
+  DataGridItem,
+  Flex
 }
 
 const install = (Vue) => {

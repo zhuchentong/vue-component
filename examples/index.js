@@ -18,6 +18,10 @@ const router = new VueRouter({
     {
       path: '/data-grid',
       component: require('./components/DataGrid.vue')
+    },
+    {
+      path: '/flex',
+      component: require('./components/Flex.vue')
     }
   ]
 });

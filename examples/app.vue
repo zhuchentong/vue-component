@@ -27,6 +27,7 @@ li + li {
       <ul>
         <li>
           <router-link to="/data-grid">DataGrid</router-link>
+          <router-link to="/flex">Flex</router-link>
         </li>
       </ul>
     </nav>
