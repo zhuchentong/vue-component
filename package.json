@@ -1,5 +1,5 @@
 {
-  "name": "fintech-vue-component",
+  "name": "vue-fintech-component",
   "version": "0.0.2",
   "description": "前端vue组件库",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://117.36.75.166:3000/web_dev/fintech-vue-component.git"
+    "url": "http://117.36.75.166:3000/web_dev/vue-fintech-component.git"
   },
   "author": "",
   "license": "ISC",
