@@ -31,7 +31,7 @@ export default {
     },
     borderColor: {
       type: String,
-      default: "black"
+      default: "#DEE1E5"
     },
     borderWeight: {
       type: String,

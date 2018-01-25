@@ -108,6 +108,10 @@ export default {
   padding: 0;
 }
 
+.data-grid-item__label{
+  background-color:#f5f5f5;
+}
+
 .data-grid-item-container {
   & > .data-grid-item__label,
   .data-grid-item__content {
