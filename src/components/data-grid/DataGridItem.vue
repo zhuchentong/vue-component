@@ -1,7 +1,7 @@
 <template>
   <div class="data-grid-item col-span" :class="itemClass" :style="itemStyle">
     <div class="data-grid-item-container row">
-      <label class="data-grid-item__label" :style="labelStyle">
+      <label class="data-grid-item__label row middle-span" :style="labelStyle">
         {{label}}
       </label>
       <div class="data-grid-item__separate" :style="separateStyle"></div>
@@ -50,26 +50,37 @@ export default {
           "flex-basis": spanValue,
           "max-width": spanValue,
           "min-width": spanValue,
-          "border-right": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`,
-          "border-bottom": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`
-          
+          "border-right": `solid ${this.grid.borderColor} ${
+            this.grid.borderWeight
+          }`,
+          "border-bottom": `solid ${this.grid.borderColor} ${
+            this.grid.borderWeight
+          }`
         };
       } else {
         return {
-          "border-right": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`,
-          "border-bottom": `solid ${this.grid.borderColor} ${this.grid.borderWeight}`
-        }
+          "border-right": `solid ${this.grid.borderColor} ${
+            this.grid.borderWeight
+          }`,
+          "border-bottom": `solid ${this.grid.borderColor} ${
+            this.grid.borderWeight
+          }`
+        };
       }
     },
     /**
-       * 获取label样式
-       */
+     * 获取label样式
+     */
     labelStyle() {
       let width = this.labelWidth || this.grid.labelWidth;
       return {
         flexBasis: `${width}px`,
         width: `${width}px`,
-        textAlign: this.itemLabelAlign
+        justifyContent: {
+          left: "flex-start",
+          center: "center",
+          right: "flex-end"
+        }[this.itemLabelAlign]
       };
     },
     contentStyle() {
@@ -77,9 +88,9 @@ export default {
         textAlign: this.itemContentAlign
       };
     },
-    separateStyle(){
+    separateStyle() {
       return {
-        "background": this.grid.borderColor
+        background: this.grid.borderColor
       };
     },
     itemLabelAlign() {
@@ -108,14 +119,16 @@ export default {
   padding: 0;
 }
 
-.data-grid-item__label{
-  background-color:#f5f5f5;
+.data-grid-item__label {
+  background-color: #f5f5f5;
 }
 
 .data-grid-item-container {
-  & > .data-grid-item__label,
+  .data-grid-item__label {
+    height: 100%;
+  }
   .data-grid-item__content {
-    padding: 10px;
+    padding: 5px;
     word-wrap: break-word;
   }
   align-items: center;

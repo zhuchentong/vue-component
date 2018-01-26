@@ -43,8 +43,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
-          'autoprefixer-loader'
+          'css-loader'
         ]
       },
       {
@@ -52,8 +51,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          'less-loader',
-          'autoprefixer-loader'
+          'less-loader'
         ]
       },
       { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=8192' },

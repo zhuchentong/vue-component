@@ -45,7 +45,6 @@
     "webpack-merge": "^3.0.0"
   },
   "dependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "html-loader": "^0.5.1",
     "vue-router": "^3.0.1"
   }
