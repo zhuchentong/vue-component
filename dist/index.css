@@ -89,3 +89,9 @@
   width: 1px;
   height: 100%;
 }
+.required[data-v-5f088334]:before {
+  content: "*";
+  display: inline-block;
+  padding-right: 5px;
+  color: red;
+}

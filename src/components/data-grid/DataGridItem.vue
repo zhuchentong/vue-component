@@ -1,7 +1,7 @@
 <template>
   <div class="data-grid-item col-span" :class="itemClass" :style="itemStyle">
     <div class="data-grid-item-container row">
-      <label class="data-grid-item__label row middle-span" :style="labelStyle">
+      <label class="data-grid-item__label row middle-span" :class="{required}" :style="labelStyle">
         {{label}}
       </label>
       <div class="data-grid-item__separate" :style="separateStyle"></div>
@@ -25,7 +25,8 @@ export default {
     label: String,
     labelAlign: String,
     labelWidth: Number,
-    contentAlign: String
+    contentAlign: String,
+    required: Boolean
   },
   computed: {
     // 分隔样式
@@ -139,5 +140,12 @@ export default {
 .data-grid-item__separate {
   width: 1px;
   height: 100%;
+}
+
+.required:before {
+  content: "*";
+  display: inline-block;
+  padding-right: 5px;
+  color: red;
 }
 </style>
